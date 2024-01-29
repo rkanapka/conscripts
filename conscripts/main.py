@@ -1,5 +1,5 @@
-from conscripts import Conscripts
-from data_processor import DataProcessor
+from conscripts.conscripts import Conscripts
+from conscripts.data_processor import DataProcessor
 
 
 def main():
