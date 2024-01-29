@@ -1,0 +1,4 @@
+requests==2.31.0
+pandas==2.2.0
+XlsxWriter==3.1.9
+pre-commit==3.6.0
