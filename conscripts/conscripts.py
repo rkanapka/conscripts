@@ -1,15 +1,19 @@
+from types import MappingProxyType
+
 import requests
 
 
 class Conscripts:
-    regions = {
-        "Alytus": 1,
-        "Kaunas": 2,
-        "Klaipeda": 3,
-        "Panevezys": 4,
-        "Siauliai": 5,
-        "Vilnius": 6,
-    }
+    regions = MappingProxyType(
+        {
+            "Alytus": 1,
+            "Kaunas": 2,
+            "Klaipeda": 3,
+            "Panevezys": 4,
+            "Siauliai": 5,
+            "Vilnius": 6,
+        }
+    )
     base_url = "https://sauktiniai.karys.lt/"
     headers = {
         "Range": "0-100000",

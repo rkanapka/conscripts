@@ -1,18 +1,21 @@
 import datetime
+from types import MappingProxyType
 
 import pandas as pd
 
 
 class DataProcessor:
-    column_renames = {
-        "pos": "Eil. numeris",
-        "number": "Karo prievolininko kodas",
-        "name": "Vardas",
-        "lastname": "Pavardė",
-        "bdate": "Gimimo metai",
-        "department": "Departamentas",
-        "info": "Šaukimo eiga ir nurodymai",
-    }
+    column_renames = MappingProxyType(
+        {
+            "pos": "Eil. numeris",
+            "number": "Karo prievolininko kodas",
+            "name": "Vardas",
+            "lastname": "Pavardė",
+            "bdate": "Gimimo metai",
+            "department": "Departamentas",
+            "info": "Šaukimo eiga ir nurodymai",
+        }
+    )
     start_row_values = (0, 0, 0, 13, 13, 13, 26)
     start_col_values = (0, 4, 8, 0, 4, 8, 0)
     file_name = "conscripts.xlsx"
