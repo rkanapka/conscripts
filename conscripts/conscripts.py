@@ -4,7 +4,7 @@ import requests
 
 
 class Conscripts:
-    regions = MappingProxyType(
+    regions: MappingProxyType = MappingProxyType(
         {
             "Alytus": 1,
             "Kaunas": 2,
@@ -14,14 +14,14 @@ class Conscripts:
             "Vilnius": 6,
         }
     )
-    base_url = "https://sauktiniai.karys.lt/"
-    headers = {
+    base_url: str = "https://sauktiniai.karys.lt/"
+    headers: dict = {
         "Range": "0-100000",
         "Referer": base_url,
     }
-    responses = {}
+    responses: dict = {}
 
-    def get_conscripts(self):
+    def get_conscripts(self) -> dict:
         for region_name, region_number in self.regions.items():
             url = f"{self.base_url}list.php?region={region_number}"
             response = requests.get(url, headers=self.headers).json()
