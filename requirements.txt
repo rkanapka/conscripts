@@ -2,3 +2,6 @@ requests==2.31.0
 pandas==2.2.0
 XlsxWriter==3.1.9
 pre-commit==3.6.0
+mypy==1.8.0
+types-requests==2.31.0.20240125
+pandas-stubs==2.1.4.231227
